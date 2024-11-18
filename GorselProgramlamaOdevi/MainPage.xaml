@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaOdevi.MainPage"
+             BackgroundColor="#1E1E2C">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,20"
+            VerticalOptions="Center">
+
+            <Image
+                Source="sami.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Samı T A Awawda"
+                TextColor="#FFB74D"
+                FontSize="34"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Bartin Üniversitesi Bilgisayar Mühendisliği"
+                TextColor="#FFFFFF"
+                FontSize="18"
+                HorizontalOptions="Center"
+                FontAttributes="Italic" />
+
+            <Label
+                Text="ÖDEV-1"
+                TextColor="#FF6F00"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

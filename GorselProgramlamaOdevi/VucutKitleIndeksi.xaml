@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaOdevi.VucutKitleIndeksi"
+             Title="Vücut Kitle İndeksi"
+             BackgroundColor="#1E1E2C">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="25"
+            VerticalOptions="CenterAndExpand">
+
+            <Label 
+                Text="VKI = KG / (BOY * BOY)"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="#FFB74D"
+                HorizontalOptions="Center" />
+
+            <VerticalStackLayout Spacing="10">
+                <Label 
+                    Text="Kilonuz (KG):"
+                    FontSize="18"
+                    TextColor="#FFFFFF" />
+                <Slider 
+                    x:Name="WeightSlider"
+                    Minimum="20"
+                    Maximum="150"
+                    Value="{Binding VKIM.Weight}"
+                    ThumbColor="#FF6F00"
+                    MinimumTrackColor="#FF6F00"
+                    MaximumTrackColor="#B0BEC5" />
+                <Entry 
+                    x:Name="WeightEntry"
+                    Text="{Binding VKIM.Weight, Mode=TwoWay}"
+                    Keyboard="Numeric"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    FontSize="16"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#263238" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="10">
+                <Label 
+                    Text="Boyunuz (CM):"
+                    FontSize="18"
+                    TextColor="#FFFFFF" />
+                <Slider 
+                    x:Name="HeightSlider"
+                    Minimum="100"
+                    Maximum="250"
+                    Value="{Binding VKIM.Height}"
+                    ThumbColor="#FF6F00"
+                    MinimumTrackColor="#FF6F00"
+                    MaximumTrackColor="#B0BEC5" />
+                <Entry 
+                    x:Name="HeightEntry"
+                    Text="{Binding VKIM.Height, Mode=TwoWay}"
+                    Keyboard="Numeric"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    FontSize="16"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#263238" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="10">
+                <Label 
+                    Text="VKI Sonucu:"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#FFB74D" />
+                <Label 
+                    x:Name="ResultLabel"
+                    Text="{Binding VKIM.ResultText}"
+                    FontSize="22"
+                    TextColor="#FF6F00"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
